@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Bienvenidos a nuestra web de hamburguesas 100% caseras con envíos a todo Capital Federal y take away las 24hs. Buenos Aires, Argentina año 2020">
+		<meta name="keywords" content="HAMBURGUESAS, PAPAS FRITAS, COMIDAS RAPIDAS, TAKEAWAY, ENVIOS, CAPITAL FEDERAL">
+
+        <title>Burger Fest</title>
+        
+		<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Righteous&family=Ultra&family=Zilla+Slab+Highlight:wght@700&display=swap" rel="stylesheet"><!-- llamado a GOOGLEFONTS cdn -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><!-- llamado a FONTAWESOME cdn -->
+        
+        <link rel="stylesheet" href="css/animate.min.css"><!-- llamado a ANIMATE -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"><!-- llamado a BOOTSTRAP css-->
+        <link rel="stylesheet" href="css/style.css"><!-- llamado a STYLE css-->
+
+        <script defer src="js/bst/jQuery-3.5.js"></script><!-- llamado a JQUERY js -->
+        <script defer src="js/index.js"></script><!-- llamado a INDEX js -->        
+    </head>
+	
+	<body>
+        <div id="banner">
+            <h1 class="animate__animated animate__fadeIn animate__slow">Burger Fest</h1>
+            <h3 class="animate__animated animate__fadeIn animate__slower">Llegamos para quedarnos<h3>
+        </div>
+            
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-xs-12 col-sm-6 col-md-3 animate__animated animate__fadeInUp">
+                    <div class="text-center">
+                        <h2>1. Armá tu Burger</h2>
+                        <p>Elegí los condimentos <br><strong>a tu gusto</strong></p>
+                        <img src="imagenes/pablo-merchan-montes-hyIE90CN6b0-unsplash.jpg" alt="hamburguesa" width="200" height="150" class="estiloImagenes">
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3 animate__animated animate__fadeInUp animate__slow">
+                    <div class="text-center">
+                        <h2>2. Acompañala con Papas</h2>
+                        <p>Variedad de cortes <br><strong>listos para salir</strong></p>
+                        <img src="imagenes/louis-hansel-shotsoflouis-vi0kZuoe0-8-unsplash.jpg" alt="papas fritas" width="200" height="150" class="estiloImagenes">
+                    </div>	    			
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3 animate__animated animate__fadeInUp animate__slower">
+                    <div class="text-center">
+                        <h2>3. ¿Qué vas a tomar?</h2>
+                        <p>Nuestras bebidas con <br><strong>el frío ideal</strong></p>
+                        <img src="imagenes/ayesha-c-S24Sq0Vc0ms-unsplash.jpg" alt="coca cola" width="200" height="150" class="estiloImagenes">
+                    </div>   			
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3 animate__animated animate__fadeInUp animate4">
+                    <div class="text-center">
+                        <h2>4. ¡Falta el postre!</h2>
+                        <p>Probá las mejores <br><strong>cremas heladas</strong></p>
+                        <img src="imagenes/photo-1594900543396-760a9add24ee.jpg" alt="helado" width="200" height="150" class="estiloImagenes">
+                    </div>		
+                </div>
+
+            </div>
+        </div><br>
+        <br>
+        
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-12 animate__animated animate__slideInLeft animate__slow">
+                    <div class="text-center">
+                        <h2>Realizá tu pedido haciendo clic acá</h2>
+                    </div>		
+                </div><br>
+                <div class="col-12 animate__animated animate__slideInLeft animate__slow">
+                    <div class="text-center">
+                        <i class="fas fa-angle-double-right"></i>  <i class="fas fa-angle-double-right"></i>  <i class="fas fa-angle-double-right"></i>   <input type="button" value="iniciar" id="iniciarPedido">   <i class="fas fa-angle-double-left"></i>  <i class="fas fa-angle-double-left"></i>  <i class="fas fa-angle-double-left"></i>
+                    </div>
+                </div><br>
+                <br>		
+                <div class="col-12 animate__animated animate__slideInLeft animate__slow">
+                    <div class="text-center" id="mensajeSobrePedido">
+                        <!-- PARRAFO CREADO DESDE JS -->
+                    </div>
+                </div>
+
+                <div class="col-md-12" id="formularioPedido" style="display: none;">
+                    <div class="formularioPedido">
+                        <form action="" class="form-horizontal" method="post">
+                            <fieldset>
+                                <legend class="subtitulo text-center animate__animated animate__zoomIn animate__slow">Armá tu Burger desde cero completando nuestro formulario</legend>
+        
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center">Para una mejor experiencia te pedimos que ingreses tu nombre</span>
+                                    <div class="col-md-8">
+                                        <input id="nombre" value="" type="text" placeholder="Escribí tu nombre" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center">Decinos la dirección exacta donde vas a recibirlo</span>
+                                    <div class="col-md-8">
+                                        <input id="direccion" value="" type="text" placeholder="Escribí tu dirección" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group" >
+                                    <span class="col-md-1 col-md-offset-2">Hamburguesa</span>
+                                    <div class="col-md-8">	
+                                        <input type="radio" name="opcion1" value="Simple"> Simple	
+                                        <input type="radio" name="opcion1" value="Doble"> Doble
+                                    </div>
+                                </div>
+                                <div class="form-group" >
+                                    <span class="col-md-1 col-md-offset-2">Pan</span>
+                                    <div class="col-md-8">	
+                                        <input type="radio" name="opcion2" value="Clásico"> Clásico	
+                                        <input type="radio" name="opcion2" value="con Sésamo"> Con Sésamo
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <label for="categorias">Ingredientes</label>
+                                    <select name="categorias" id="ingredientes">
+                                        <option selected="selected">seleccioná</option>
+                                        <option value="con Muzzarella & Jamón">muzzarella & jamón</option>
+                                        <option value="con Cheddar & Bacon">cheddar & bacon</option>
+                                        <option value="con Cebolla & Morrón">cebolla & morrón</option>
+                                        <option value="sin ingredientes">sin ingredientes</option>
+                                    </select>
+                                
+                                    <label for="categorias">Aderezos</label>
+                                    <select name="categorias" id="aderezos">
+                                        <option selected="selected">seleccioná</option>
+                                        <option value="Mayonesa">mayonesa</option>
+                                        <option value="Ketchup">ketchup</option>
+                                        <option value="Salsa Criolla">salsa criolla</option>
+                                        <option value="sin aderezos">sin aderezos</option>
+                                    </select>
+                                </div><br>
+                                <div class="form-group" >
+                                    <span class="col-md-1 col-md-offset-2">Papas</span>
+                                    <div class="col-md-8">	
+                                        <input type="radio" name="opcion3" value="Fritas Bastón"> Fritas bastón	
+                                        <input type="radio" name="opcion3" value="Al Horno Rústicas"> Horno rústicas
+                                    </div>
+                                </div>
+                                <div class="form-group" >
+                                    <span class="col-md-1 col-md-offset-2">Bebidas</span>
+                                    <div class="col-md-8">	
+                                        <input type="radio" name="opcion4" value="Agua Villavicencio"> Agua Villavicencio	
+                                        <input type="radio" name="opcion4" value="Gaseosa Coca Cola"> Gaseosa Coca Cola
+                                        <input type="radio" name="opcion4" value="Cerveza Stella Artois"> Cerveza Stella Artois
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="col-md-1 col-md-offset-2 text-center">Podés dejarnos un mensaje/aclaración a continuación</span>
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Dejanos tu mensaje" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <label for="confirma">Abono en efectivo al momento de la entrega</label>
+                                    <input type="checkbox" name="opcion5" value="(Pago en Eftvo.)">								
+                                </div><br>
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center">
+                                        <button type="reset" class="btn btn-secondary btn-sm">Borrar Datos</button>
+                                        <button id="confirmarPedido" type="button" class="btn btn-secondary btn-sm">Confirmar Pedido</button>
+                                    </div>
+                                </div>	
+                            </fieldset><br>
+                        </form>
+                    </div>
+                </div>
+
+            </div>    
+        </div><br>    
+        <br><br>
+        
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-12 animate__animated animate__slideInRight animate__slow">
+                    <div class="text-center">
+                        <h2>Consultá nuestros días y horarios de atención</h2>
+                    </div>
+                </div><br>    
+                <div class="col-12 animate__animated animate__slideInRight animate__slow">
+                    <div class="text-center">
+                        <input type="button" value="consultar" id="diasYhorarios">
+                    </div>
+                </div><br>
+                <br>    
+                <div class="col-12 animate__animated animate__slideInRight animate__slow">
+                    <div class="text-center" id="mostrarDyH" style="display: none;">
+                        <p>Martes a Jueves de 19 a 23hs.</p>
+                        <p>Viernes a Domingo de 19 a 01hs.</p>
+                        <p>Lunes cerrado</p>
+                    </div>		
+                </div><br>
+                <br><br>
+                <div class="col-12 animate__animated animate__slideInLeft animate__slower">
+                    <div class="text-center">
+                        <h2>Dejá tu contacto para recibir las promociones semanales</h2>
+                    </div>		
+                </div><br>
+                <div class="col-12 animate__animated animate__slideInLeft animate__slower">
+                    <div class="text-center">
+                        <input type="button" value="ingresar" id="contactoPromos">
+                    </div>
+                </div>
+                
+            </div>
+        </div><br>
+        <br><br>
+
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-12 animate__animated animate__slideInRight animate4">
+                    <div class="text-center">
+                        <h2>Completá los datos y calculá el costo del envío</h2>
+                    </div>		
+                </div><br>
+                <div class="col-12 animate__animated animate__slideInRight animate4">
+                    <div class="text-center">
+                        <form id="formulario">
+                            <label for="">
+                                Ingresá tu dirección:
+                            </label>
+                                <input id="direccionUsuario" value="" placeholder="direccion" type="text">
+                            <label for="">
+                                Ingresá tu barrio:
+                            </label>
+                                <input id="barrioUsuario" value="" placeholder="barrio" type="text">
+                            <label for="">
+                                Ingresá tu teléfono:
+                            </label>
+                                <input id="telefonoUsuario" value="" placeholder="telefono" type="text">
+                                <input type="button" value="calcular" id="datosUsuario">
+                        </form>
+                    </div>
+                </div><br>
+                <br>		
+                <div class="col-12 animate__animated animate__slideInRight animate4">
+                    <div class="text-center" id="mensajeSobreEnvio">
+                        <!-- PARRAFO CREADO DESDE JS -->
+                    </div>
+                </div>
+
+            </div>
+        </div><br>
+        
+        <footer>
+            <div class="col-12">
+                <div id="footer">
+                    <p>Seguinos en nuestras redes</p>
+                    <ul class="list-inline"> 
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><!-- llamado a POPPER js cdn -->
+        <script src="../js/bootstrap.min.js"></script><!-- llamado a BOOTSTRAP js -->          
+    </body>
+</html>
