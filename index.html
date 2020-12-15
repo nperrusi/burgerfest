@@ -16,7 +16,8 @@
         <link rel="stylesheet" href="css/style.css"><!-- llamado a STYLE css-->
 
         <script defer src="js/bst/jQuery-3.5.js"></script><!-- llamado a JQUERY js -->
-        <script defer src="js/index.js"></script><!-- llamado a INDEX js -->        
+        <script defer src="js/index.js"></script><!-- llamado a INDEX js -->
+        <script defer src="./imagenes.json"></script><!-- llamado a IMAGENES json -->
     </head>
 	
 	<body>
@@ -32,7 +33,7 @@
                     <div class="text-center">
                         <h2>1. Armá tu Burger</h2>
                         <p>Elegí los condimentos <br><strong>a tu gusto</strong></p>
-                        <img src="imagenes/pablo-merchan-montes-hyIE90CN6b0-unsplash.jpg" alt="hamburguesa" width="200" height="150" class="estiloImagenes">
+                        <img src="imagenes/burger.jpg" alt="hamburguesa" width="200" height="150" class="estiloImagenes">
                     </div>
                 </div>
 
@@ -40,7 +41,7 @@
                     <div class="text-center">
                         <h2>2. Acompañala con Papas</h2>
                         <p>Variedad de cortes <br><strong>listos para salir</strong></p>
-                        <img src="imagenes/louis-hansel-shotsoflouis-vi0kZuoe0-8-unsplash.jpg" alt="papas fritas" width="200" height="150" class="estiloImagenes">
+                        <img src="imagenes/papas.jpg" alt="papas fritas" width="200" height="150" class="estiloImagenes">
                     </div>	    			
                 </div>
 
@@ -48,7 +49,7 @@
                     <div class="text-center">
                         <h2>3. ¿Qué vas a tomar?</h2>
                         <p>Nuestras bebidas con <br><strong>el frío ideal</strong></p>
-                        <img src="imagenes/ayesha-c-S24Sq0Vc0ms-unsplash.jpg" alt="coca cola" width="200" height="150" class="estiloImagenes">
+                        <img src="imagenes/coca.jpg" alt="coca cola" width="200" height="150" class="estiloImagenes">
                     </div>   			
                 </div>
 
@@ -56,7 +57,7 @@
                     <div class="text-center">
                         <h2>4. ¡Falta el postre!</h2>
                         <p>Probá las mejores <br><strong>cremas heladas</strong></p>
-                        <img src="imagenes/photo-1594900543396-760a9add24ee.jpg" alt="helado" width="200" height="150" class="estiloImagenes">
+                        <img src="imagenes/conito.jpg" alt="helado" width="200" height="150" class="estiloImagenes">
                     </div>		
                 </div>
 
@@ -67,20 +68,23 @@
         <div class="container">
             <div class="row">
                
-                <div class="col-12 animate__animated animate__slideInLeft animate__slow">
+                <div class="col-12 animate__animated animate__fadeInUp animate__slow">
                     <div class="text-center">
                         <h2>Realizá tu pedido haciendo clic acá</h2>
                     </div>		
                 </div><br>
-                <div class="col-12 animate__animated animate__slideInLeft animate__slow">
+                <div class="col-12 animate__animated animate__fadeInUp animate__slow">
                     <div class="text-center">
                         <i class="fas fa-angle-double-right"></i>  <i class="fas fa-angle-double-right"></i>  <i class="fas fa-angle-double-right"></i>   <input type="button" value="iniciar" id="iniciarPedido">   <i class="fas fa-angle-double-left"></i>  <i class="fas fa-angle-double-left"></i>  <i class="fas fa-angle-double-left"></i>
                     </div>
                 </div><br>
                 <br>		
-                <div class="col-12 animate__animated animate__slideInLeft animate__slow">
+                <div class="col-12 animate__animated animate__fadeInUp animate__slow">
                     <div class="text-center" id="mensajeSobrePedido">
-                        <!-- PARRAFO CREADO DESDE JS -->
+                    <!-- PARRAFO CREADO DESDE JS -->
+                        <div id="burgerGif">
+                    <!-- LLAMADA A IMAGEN DE API -->                            
+                        </div>
                     </div>
                 </div>
 
@@ -88,36 +92,36 @@
                     <div class="formularioPedido">
                         <form action="" class="form-horizontal" method="post">
                             <fieldset>
-                                <legend class="subtitulo text-center animate__animated animate__zoomIn animate__slow">Armá tu Burger desde cero completando nuestro formulario</legend>
+                                <legend class="text-center animate__animated animate__zoomIn animate__slow">Armá tu Burger desde cero completando nuestro formulario</legend>
         
                                 <div class="form-group">
-                                    <span class="col-md-1 col-md-offset-2 text-center">Para una mejor experiencia te pedimos que ingreses tu nombre</span>
+                                    <span class="subtitulo col-md-1 col-md-offset-2 text-center">Para una mejor experiencia te pedimos que ingreses tu nombre</span>
                                     <div class="col-md-8">
                                         <input id="nombre" value="" type="text" placeholder="Escribí tu nombre" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <span class="col-md-1 col-md-offset-2 text-center">Decinos la dirección exacta donde vas a recibirlo</span>
+                                    <span class="subtitulo col-md-1 col-md-offset-2 text-center">Decinos la dirección exacta donde vas a recibirlo</span>
                                     <div class="col-md-8">
                                         <input id="direccion" value="" type="text" placeholder="Escribí tu dirección" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group" >
-                                    <span class="col-md-1 col-md-offset-2">Hamburguesa</span>
+                                    <span class="subtitulo col-md-1 col-md-offset-2">Hamburguesa</span>
                                     <div class="col-md-8">	
                                         <input type="radio" name="opcion1" value="Simple"> Simple	
                                         <input type="radio" name="opcion1" value="Doble"> Doble
                                     </div>
                                 </div>
                                 <div class="form-group" >
-                                    <span class="col-md-1 col-md-offset-2">Pan</span>
+                                    <span class="subtitulo col-md-1 col-md-offset-2">Pan</span>
                                     <div class="col-md-8">	
                                         <input type="radio" name="opcion2" value="Clásico"> Clásico	
                                         <input type="radio" name="opcion2" value="con Sésamo"> Con Sésamo
                                     </div>
                                 </div>
                                 <div class="container">
-                                    <label for="categorias">Ingredientes</label>
+                                    <label class="subtitulo" for="categorias">Ingredientes</label>
                                     <select name="categorias" id="ingredientes">
                                         <option selected="selected">seleccioná</option>
                                         <option value="con Muzzarella & Jamón">muzzarella & jamón</option>
@@ -126,7 +130,7 @@
                                         <option value="sin ingredientes">sin ingredientes</option>
                                     </select>
                                 
-                                    <label for="categorias">Aderezos</label>
+                                    <label class="subtitulo" for="categorias">Aderezos</label>
                                     <select name="categorias" id="aderezos">
                                         <option selected="selected">seleccioná</option>
                                         <option value="Mayonesa">mayonesa</option>
@@ -136,14 +140,14 @@
                                     </select>
                                 </div><br>
                                 <div class="form-group" >
-                                    <span class="col-md-1 col-md-offset-2">Papas</span>
+                                    <span class="subtitulo col-md-1 col-md-offset-2">Papas</span>
                                     <div class="col-md-8">	
                                         <input type="radio" name="opcion3" value="Fritas Bastón"> Fritas bastón	
                                         <input type="radio" name="opcion3" value="Al Horno Rústicas"> Horno rústicas
                                     </div>
                                 </div>
                                 <div class="form-group" >
-                                    <span class="col-md-1 col-md-offset-2">Bebidas</span>
+                                    <span class="subtitulo col-md-1 col-md-offset-2">Bebidas</span>
                                     <div class="col-md-8">	
                                         <input type="radio" name="opcion4" value="Agua Villavicencio"> Agua Villavicencio	
                                         <input type="radio" name="opcion4" value="Gaseosa Coca Cola"> Gaseosa Coca Cola
@@ -151,7 +155,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <span class="col-md-1 col-md-offset-2 text-center">Podés dejarnos un mensaje/aclaración a continuación</span>
+                                    <span class="subtitulo col-md-1 col-md-offset-2 text-center">Podés dejarnos un mensaje/aclaración a continuación</span>
                                     <div class="col-md-8">
                                         <textarea class="form-control" id="message" name="message" placeholder="Dejanos tu mensaje" rows="3"></textarea>
                                     </div>
@@ -173,54 +177,51 @@
 
             </div>    
         </div><br>    
-        <br><br>
+        <br>
         
         <div class="container">
             <div class="row">
             
-                <div class="col-12 animate__animated animate__slideInRight animate__slow">
+                <div class="col-6 animate__animated animate__slideInLeft animate__slow">
                     <div class="text-center">
                         <h2>Consultá nuestros días y horarios de atención</h2>
                     </div>
-                </div><br>    
-                <div class="col-12 animate__animated animate__slideInRight animate__slow">
+                </div><br> 
+                <div class="col-6 animate__animated animate__slideInRight animate__slow">
+                    <div class="text-center">
+                        <h2>Dejá tu contacto para recibir las promociones semanales</h2>
+                    </div>		
+                </div><br>   
+                <div class="col-6 animate__animated animate__slideInLeft animate__slower">
                     <div class="text-center">
                         <input type="button" value="consultar" id="diasYhorarios">
                     </div>
                 </div><br>
-                <br>    
-                <div class="col-12 animate__animated animate__slideInRight animate__slow">
+                <div class="col-6 animate__animated animate__slideInRight animate__slower">
+                    <div class="text-center">
+                        <input type="button" value="ingresar" id="contactoPromos">
+                    </div>
+                </div><br>    
+                <div class="col-6 animate__animated animate__slideInRight animate__slow">
                     <div class="text-center" id="mostrarDyH" style="display: none;">
                         <p>Martes a Jueves de 19 a 23hs.</p>
                         <p>Viernes a Domingo de 19 a 01hs.</p>
                         <p>Lunes cerrado</p>
                     </div>		
                 </div><br>
-                <br><br>
-                <div class="col-12 animate__animated animate__slideInLeft animate__slower">
-                    <div class="text-center">
-                        <h2>Dejá tu contacto para recibir las promociones semanales</h2>
-                    </div>		
-                </div><br>
-                <div class="col-12 animate__animated animate__slideInLeft animate__slower">
-                    <div class="text-center">
-                        <input type="button" value="ingresar" id="contactoPromos">
-                    </div>
-                </div>
-                
+                              
             </div>
         </div><br>
-        <br><br>
-
+        
         <div class="container">
             <div class="row">
                
-                <div class="col-12 animate__animated animate__slideInRight animate4">
+                <div class="col-12 animate__animated animate__fadeInDown animate4">
                     <div class="text-center">
                         <h2>Completá los datos y calculá el costo del envío</h2>
                     </div>		
                 </div><br>
-                <div class="col-12 animate__animated animate__slideInRight animate4">
+                <div class="col-12 animate__animated animate__fadeInDown animate4">
                     <div class="text-center">
                         <form id="formulario">
                             <label for="">
@@ -240,7 +241,7 @@
                     </div>
                 </div><br>
                 <br>		
-                <div class="col-12 animate__animated animate__slideInRight animate4">
+                <div class="col-12 animate__animated animate__slideInDown animate4">
                     <div class="text-center" id="mensajeSobreEnvio">
                         <!-- PARRAFO CREADO DESDE JS -->
                     </div>
@@ -263,6 +264,6 @@
             </div>
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><!-- llamado a POPPER js cdn -->
-        <script src="../js/bootstrap.min.js"></script><!-- llamado a BOOTSTRAP js -->          
+        <script src="../js/bootstrap.min.js"></script><!-- llamado a BOOTSTRAP js -->
     </body>
 </html>

@@ -12,13 +12,13 @@ $(document).ready( () => {
   $("#datosUsuario").click(datosUsuario);
   //EVENTO SOBRE REDES SOCIALES
   $("ul li").mousedown(muestraMensaje);
-     
 })
 
 //SE EJECUTA SOBRE BOTÓN DE INICIAR PEDIDO
 function iniciarPedido(){
   $("#formularioPedido").fadeIn();
 }
+
 //SE EJECUTA SOBRE BOTÓN DE CONFIRMAR PEDIDO
 function confirmarPedido(){
   $("#formularioPedido").fadeOut();
@@ -50,6 +50,16 @@ function confirmarPedido(){
   mensaje.innerHTML = "Detalle de tu orden: Hamburguesa "+Hamburguesa+" "+Ingredientes+", "+Aderezos+" en pan artesanal "+Pan+". Acompañás con papas "+Papas+" y "+Bebidas+" "+Efectivo
   
   $("#mensajeSobrePedido").append(mensaje)
+
+  //LLAMA A IMAGEN DE API
+  $.ajax({
+    url: "https://api.giphy.com/v1/gifs/1zkrF3l0RfgapqdySj?api_key=Yy1Ik3wz2Qg7htUtzMfw5OK8EbBhO1Q1", 
+    dataType: "json",
+    type: "get",
+    success: function(response){
+      $("#burgerGif").append(`<img src="${response.data.images["480w_still"].url}" alt="">`)
+    }
+  });
 }
 
 //ACCEDE A NODO, OBTIENE DATOS, CREA ELEMENTO, ASIGNA TEXTO Y AGREGA A PÁGINA  

@@ -8,7 +8,7 @@ body {
   margin: 0px;
   color: rgba (0,0,0,0.9);
   font-size: 17px;
-  font-family: font-family: 'Righteous', cursive;
+  font-family: 'Righteous', cursive;
 }
 
 h1 {
@@ -29,7 +29,7 @@ h3 {
 }
 
 i {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .estiloImagenes {
@@ -48,6 +48,13 @@ i {
   color: aliceblue;
 }
 
+.subtitulo {
+  font-family: 'Fredericka the Great', cursive;
+  color: rgb(255, 255, 0);
+  font-weight: lighter;
+  font-size: 17px;
+}
+
 #banner {
   background-image: url(https://images.unsplash.com/photo-1554306297-0c86e837d24b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=721&q=80);
   background-size: cover;
@@ -64,11 +71,16 @@ i {
 }
 
 #mensajeSobreEnvio {
-  font-size: 16px;
+  font-size: 17px;
   font-family: 'Zilla Slab Highlight', cursive;
 }
 
 #mensajeSobrePedido {
+  font-size: 17px;
+  font-family: 'Zilla Slab Highlight', cursive;
+}
+
+#mostrarDyH {
   font-size: 16px;
   font-family: 'Zilla Slab Highlight', cursive;
 }
